@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           function retornaGrupo(cidade){
+               switch(cidade){
+                   case 'Belo Horizonte':
+                       return 'mineiro';
+                    case 'Sao Paulo':
+                        return 'paulista';
+                    case 'Juiz de Fora':
+                        return 'mineiro';
+                    case 'Campinas':
+                        return 'paulista';
+                    default:
+                        return 'outro';
+               }
+           }
+
+           var grupo = retornaGrupo('Sao Paulo');
+
+           console.log(grupo);
+
+           grupo = retornaGrupo('salvador');
+           console.log(grupo);
+        </script>
+    </body>
+</html>

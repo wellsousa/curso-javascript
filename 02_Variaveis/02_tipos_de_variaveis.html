@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        <script>
+            //variaveis em javascript nao possuem tipagem como em outras linguagens
+            var value = "wellington";
+            //a mesma variavel pode armazenar diferentes tipos de daos durante a execução do script        
+            value = 23;
+            value = false;
+
+            //tipos de variaveis escalares
+            //variaveis em javascript tem tipagem dinamica
+            var nome = "wellington";
+            var idade = 23;
+            var peso = 71.3;
+            var solteiro = true;
+
+            //outros tipos
+
+            //arrays
+            var alunos = ['paulo', 'antonio', 'mathues'];
+            console.log(alunos);
+            //os itens de um array podem ser acessados através de colchetes e um
+            //numero que indica sua ordem dentro do array começando em zero
+            console.log(alunos[0]);
+            //objetos
+            var aluno = {
+                nome: 'Diego',
+                idade: 23,
+                peso: 80.5,
+                humano: true
+            };
+
+            //para acessar as propriedades de um objeto utilize o .
+            console.log(aluno.nome);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+            function retornaSexo(sexo){
+                var resultado = "";
+                if(sexo == 'M' || sexo == 'm'){
+                    resultado = "Masculino";
+                }else if(sexo == 'F' || sexo == 'f'){
+                    resultado = "Feminino";
+                }else{
+                    resultado = "Outro";
+                }
+
+                return resultado;
+            }
+
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+            resultado = retornaSexo('f');
+            console.log(resultado);
+        </script>
+    </body>
+</html>
