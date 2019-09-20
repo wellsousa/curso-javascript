@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           /*
+                Esse método permite executar uma função para cada item do array
+           */
+
+            var number = [0,1,2,3,4,5,6,7,8,9];
+            var total = 0;
+
+            //o primeiro indice é cada item do array e o segundo é  o indice
+            function sum(item, index){
+                total += item;
+                console.log("[" + index + "]+=" + total + "=>");
+            }
+
+            //observe que é passado como parametro apenas o nome da função e internamente o javascript
+            //decide qual é o valor e qual é o indice
+            number.forEach(sum);
+        </script>
+    </body>
+</html>

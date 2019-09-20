@@ -17,6 +17,23 @@
             //o resultado será falso. Esse operador verifica se o valor e o tipo da variavel sao iguais.
             var teste2 = (1 === "1");
             console.log(teste2);
+
+            //voce pode substuir varias linhas de codigo com if/rldr pot uma unica linha
+            var sexo = 'M';
+            var masculino;
+
+            if(sexo == 'M'){
+                masculino = true;
+            }else{
+                masculino = false;
+            }
+
+            // o codigo acima pode ser escrito da seguinte forma:
+            masculino = (sexo == 'M');
+
+            if(masculino){
+                console.log('O individuo é do sexo masculino');
+            }
         </script>
     </body>
 </html>

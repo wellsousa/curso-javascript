@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           /*
+                Nesse exemplo é demonstrado como obter todos itens do array iniciados com uma letra especifica.
+           */
+
+            //iniciando as variaveis
+            var marcas = ["Fiat", "Chevrolet", "ford","Chrisler","Hyunday","Cherry","Pegeout", "Ferrari"];
+            var marcas_selecionadas=[];
+            var novo_indice=0;
+            var letra = "f";
+
+            function selecionarMarcas(item, indice){
+                //observe que fazemos chamadas a duas funções em sequencia toLowerCase() e indexOf()
+                if(marcas[indice].toLowerCase().indexOf("f")==0){
+                    marcas_selecionadas[novo_indice] = item;
+                    //coloca a string em maiusculo
+                    marcas_selecionadas[novo_indice] = marcas_selecionadas[novo_indice].toUpperCase();
+                    novo_indice++; 
+                }
+            }
+
+            marcas.forEach(selecionarMarcas);
+            console.log(marcas_selecionadas);
+
+        </script>
+    </body>
+</html>

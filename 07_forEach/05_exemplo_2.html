@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           /*
+                Nesse exemplo é demonstrado como obter todas as strings maiores que x caracteres
+           */
+
+            //iniciando as variaveis
+            var frases = ["Eu gosto de você", "Olá", "Prazer em conhecê-lo", "Até logo!"];
+            var frases_selecionadas = [];
+            var novo_indice = 0;
+            var tamanho_min = 10;
+
+            function selecionaFrases(item, indice){
+                if(frases[indice].length > tamanho_min){
+                    frases_selecionadas[novo_indice] = item;
+                    novo_indice++;
+                }
+            }
+
+            frases.forEach(selecionaFrases);
+            console.log(frases_selecionadas);
+
+        </script>
+    </body>
+</html>

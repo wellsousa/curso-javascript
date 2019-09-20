@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           /*
+                Esse método permite executar uma função para cada item do array
+           */
+
+            //lembre-se que 'var' garante escopo de bloco a variavel e ela pode ser acessada livremente dentro do mesmo
+            //bloco de código
+            var numbers = [0,1,2,3,4,5,6,7,8,9];
+            var total = 0;
+
+            //lembre-se o primeiro argumento é o valor e o segundo é o indice
+            function autoSum(item, index){
+                total += item;
+                numbers[index] = total;
+            }
+
+            numbers.forEach(autoSum);
+
+            console.log(numbers);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+
+
+        
+        
+        <script>
+           /*
+                Esse método permite executar uma função para cada item do array
+           */
+
+           var colors = ["Verde", "Amarelo", "Azul", "Branco"];
+
+           function printItem(item){
+               console.log(item);
+           }
+
+           //a função forEach é um metodo de arrays e para chama-la faça como abaixo
+           colors.forEach(printItem);
+
+
+           //a função passada como parametro tem um parametro apenas que é usado para se referir ao indice do array
+           var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+           var value = 3;
+           function multiplicateBy(item){
+                return console.log(item * 3);
+           }
+
+           numbers.forEach(multiplicateBy);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>javascript básico</title>
+    </head>
+    <body>
+        <div id="container">
+            <p id="mensagem"></p>
+        </div>
+
+        
+        
+        <script>
+            /*
+                
+            */
+
+            var pElement = document.querySelector('div#container p#mensagem');
+            
+
+            function printHelloWorld(){
+                var text = document.createTextNode("Hello World");
+                pElement.appendChild(text);
+            }
+
+            setInterval(printHelloWorld, 2000);
+        </script>
+    </body>
+</html>

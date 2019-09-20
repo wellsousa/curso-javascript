@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>>incidência de pragas</title>
+    </head>
+    <body>
+        <div id="main" class="main">
+            <h3>Auxilio de Tomada de Decisão</h3>
+            
+
+            <button class="btn-verificar">Verificar Incidência</button>
+        </div>
+
+        
+        
+        <script>
+           const totalArea = 250;
+            var list=[{id: 0, name: "Spodoptera", quantity: 46},
+                      {id: 1, name: "Torraozinho", quantity: 91},
+                      {id: 2, name: "Falsa Medideira", quantity: 32}];
+
+            var incidencia = 0;
+
+           var containerElement = document.querySelector('div#main');
+           
+           var tableElement = document.createElement('table');
+           var tableHead = document.createElement('thead');
+           var tableBody = document.createElement('tbody');
+           var th = document.creatElement('th');
+           var td = document.createElement('td');
+
+           tableElement.appendChild(tableHead);
+
+           var textElement = document.createTextNode('Nome');
+           th.appendChild(textElement);
+           tableHead.appendChild(th);
+
+           textElement = document.createTextNode('Quantidade');
+           th.appendChild(textElement);
+           tableHead.appendChild(th);
+
+           textElement = document.createTextNode('Incidência');
+           th.appendChild(textElement);
+           tableHead.appendChild(th);
+
+           tableElement.appendChild(tableBody);
+            //for(var i=0; i < list.length; i++){
+                //textElement = document.createNodeText(list[i].name);
+                //tableBody.appendChild(textElement);
+            //}
+            
+
+
+           containerElement.appendChild(tableElement);
+            console.log(containerElement);
+
+           var btnElement = document.querySelector('div.main button.btn-verificar');
+           console.log(btnElement);
+           btnElement.onclick = function(){
+               verifica_incidencia();
+           }
+
+           function verifica_incidencia(){
+               console.log("verificando a incidencia");
+           }
+        </script>
+    </body>
+</html>
