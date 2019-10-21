@@ -1,0 +1,136 @@
+<! doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Curso - Javascript</title>
+        <meta charset="utf-8" />
+
+        <style>
+            .titulo{
+                color: #f00;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+
+            div{
+                /*
+                    borda com 1px de largura
+                */
+                border: 1px solid #000;
+                padding: 10px;
+
+                /*
+                    faŕa com que a div ocupe apenas o espaço necessário para exibir o conteúdo.
+                    Por padrao, as divs ocupam toda a area disponivel na janela
+                */
+                display: inline-block;
+            }
+
+            a{
+                display:inline-block;
+            }
+
+            .topicos{
+                background-color: #ddd;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1 class="titulo">querySelectorAll</h1>
+
+        <p>O querySelectorAll() é um método que retorna os elementos que correspondem a uma classe css ou a uma tag especifica</p>
+
+        <h2 class="titulo">Canais de cursos de javascript no youtube</h2>
+
+        <div>
+            <h3>conteúdo: </h3>
+            <p>Abaixo estão alguns canais com vários contéudos sobre programação.</p>
+            <p>Você prcisará dominar HTML, CSS e Javascript.</p>
+            <p class="titulo">e muito mais</p>
+        </div>
+
+        <div class="topicos">
+            <h3>Topicos </h3>
+            <p>Seleção por tags</p>
+            <p>Seleção por classes</p>
+            <p>Seleçao de elementos filhos</p>
+        </div>        
+        <p class="titulo">links:</P>
+        <p>cfbcursos: <a href="http://www.youtube.com/cfbcursos" target="_blank">acessar</a></p>
+
+        <hr>
+    </body>
+
+    <script>
+        var p_elements = document.querySelectorAll('p')
+
+        //obtem o total de elementos p contidos no documento HTML
+        document.write("total de elementos 'p': " + p_elements.length + "</br>")
+
+        //obtendo o conteudo elemento p[0]
+        document.write('conteúdo do elemento p[0]: </br>');
+        document.write(p_elements[0].innerHTML);
+
+        //modificando a cor do elemento p com indice 0
+        p_elements[0].style.color = "#00f";
+
+        //alterar o conteúdo de um elemento p com indice n
+        p_elements[1].innerHTML = "Confira alguns excelentes canais com conteúdos sobre desenvolvimento Web!";
+
+        /*
+            O querySelectorAll permite recuperar todos elementos que possuem uma classe especifica
+        */
+        
+        document.write('todos os elementos que possuem a classe "titulo": </br>');
+        var elements = document.querySelectorAll(".titulo");
+
+        for(let i=0; i < elements.length; i++){
+            document.write(elements[i].innerHTML + "</br>");
+        }
+
+        /*
+            para obter todos os elementos de uma tag com uma classe especifca
+        */
+
+        document.write('elementos "p" com a classe .titulo: </br>');
+        elements = document.querySelectorAll('p.titulo');
+
+        for(let i=0; i< elements.length; i++){
+            document.write(elements[i].innerHTML + '</br>');
+        }
+
+        /*
+            selecionar todos os elementos "p" que estão dentro de alguma "div".
+        */
+        elements = document.querySelectorAll('div > p');
+        for(let i=0; i < elements.length; i++){
+            elements[i].style.color = "#0a0";
+        }
+
+        /*
+            selecionar todos os elementos "p" dentro de uma 
+        */
+        elements = document.querySelectorAll('div > p.titulo');
+        for(let i=0; i < elements.length; i++){
+            elements[i].style.color = "#0cf";
+        }
+
+        /*
+            para selecionar todos elementos dentro de uma "div"
+        */
+
+        elements = document.querySelectorAll("div > *");
+
+        for(let i=0; i < elements.length; i++){
+            elements[i].style.textDecoration = "underline";
+        }
+
+        elements = document.querySelectorAll("div.topicos > *");
+
+        for(let i=0; i < elements.length; i++){
+            elements[i].style.color = "000";
+        }
+    </script>
+
+</html>
